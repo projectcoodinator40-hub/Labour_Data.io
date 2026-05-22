@@ -94,8 +94,8 @@ for (let i = 1; i <= 20; i++) {
 </table>
 
 <button class="save" onclick="sendToGoogleSheets()">☁️ Save to Cloud</button>
-<button class="excel" onclick="exportToExcel()">📊 Download Excel</button>
-<button class="clear" onclick="clearForm()">🧹 Clear Form</button>
+<button class="excel" onclick="exportToExcel()">Download Excel</button>
+<button class="clear" onclick="clearForm()">Clear Form</button>
 
 <script>
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwCjCeblunGRWSlGTwkfO5I_HfHlcLEcZ4Tp3hYjbEwt-ahba02SNS9X8tHmhqk7iqY/exec";
@@ -133,8 +133,8 @@ function sendToGoogleSheets() {
     method: "POST",
     body: JSON.stringify(allData)
   })
-  .then(() => alert("✅ All data saved (no rows missed)"))
-  .catch(() => alert("❌ Error sending data"));
+  .then(() => alert("All data saved (no rows missed)"))
+  .catch(() => alert("Error sending data"));
 }
 
 // EXPORT TO EXCEL
